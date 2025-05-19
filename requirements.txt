@@ -1,0 +1,5 @@
+Flask
+requests
+python-dotenv
+openai # SiliconFlow is OpenAI compatible
+pyinstaller==5.13.2

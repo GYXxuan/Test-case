@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硅基流动 测试用例生成器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>通过硅基流动 API 生成测试用例</h1>
+        <form id="requirementsForm">
+            <div class="input-group">
+                <label for="requirementText">需求文本：</label>
+                <textarea id="requirementText" name="requirementText" rows="10" placeholder="在此输入您的需求文本..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="requirementImage">需求图片 (可选)：</label>
+                <input type="file" id="requirementImage" name="requirementImage" accept="image/*">
+            </div>
+            <button type="submit">生成测试用例</button>
+        </form>
+        <div id="spinner" class="spinner" style="display:none;"></div>
+        <div class="results-container">
+            <h2>生成的测试用例：</h2>
+            <pre id="testCasesResult"></pre>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
